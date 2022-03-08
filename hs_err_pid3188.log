@@ -1,0 +1,207 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 83886080 bytes for Failed to commit area from 0x00000000b1c00000 to 0x00000000b6c00000 of length 83886080.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3387), pid=3188, tid=6620
+#
+# JRE version:  (11.0.14.1+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.14.1+10-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=59850:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin -Dfile.encoding=UTF-8 day12.Task1
+
+Host: Intel(R) Pentium(R) CPU B980 @ 2.40GHz, 2 cores, 4G,  Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+Time: Fri Feb 18 19:33:01 2022 RTZ 2 (зима) elapsed time: 0.644259 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001eab24e5800):  JavaThread "Unknown thread" [_thread_in_vm, id=6620, stack(0x0000004630b00000,0x0000004630c00000)]
+
+Stack: [0x0000004630b00000,0x0000004630c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e62a]
+V  [jvm.dll+0x7ab569]
+V  [jvm.dll+0x7acc58]
+V  [jvm.dll+0x7ad333]
+V  [jvm.dll+0x24f7f8]
+V  [jvm.dll+0x61b8ca]
+V  [jvm.dll+0x610155]
+V  [jvm.dll+0x30756c]
+V  [jvm.dll+0x3073f2]
+V  [jvm.dll+0x30c116]
+V  [jvm.dll+0x3527bf]
+V  [jvm.dll+0x3521f0]
+V  [jvm.dll+0x2e4568]
+V  [jvm.dll+0x2e56c6]
+V  [jvm.dll+0x785407]
+V  [jvm.dll+0x786b8f]
+V  [jvm.dll+0x35f4f9]
+V  [jvm.dll+0x7683a0]
+V  [jvm.dll+0x3ccf9f]
+V  [jvm.dll+0x3cf331]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x4d241]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001eab03b1090, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001eab24fc000 GCTaskThread "GC Thread#0" [stack: 0x0000004630c00000,0x0000004630d00000] [id=1740]
+  0x000001eab251d800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000004630d00000,0x0000004630e00000] [id=5484]
+  0x000001eab251e800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000004630e00000,0x0000004630f00000] [id=3668]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa6e603d37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001eab24e24b0] Heap_lock - owner thread: 0x000001eab24e5800
+
+Heap address: 0x00000000b1c00000, size: 1252 MB, Compressed Oops mode: Non-zero based: 0x00000000b1c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.276 Loaded shared library C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff74d540000 - 0x00007ff74d54d000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\java.exe
+0x00007ffa99450000 - 0x00007ffa99646000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffa980b0000 - 0x00007ffa9816d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffa96d30000 - 0x00007ffa96ff9000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffa96c30000 - 0x00007ffa96d30000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffa8ae50000 - 0x00007ffa8ae67000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\jli.dll
+0x00007ffa989b0000 - 0x00007ffa98b50000 	C:\Windows\System32\USER32.dll
+0x00007ffa974c0000 - 0x00007ffa974e2000 	C:\Windows\System32\win32u.dll
+0x00007ffa99360000 - 0x00007ffa9938a000 	C:\Windows\System32\GDI32.dll
+0x00007ffa97000000 - 0x00007ffa9710b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffa973d0000 - 0x00007ffa9746d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffa8ae70000 - 0x00007ffa8ae89000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\VCRUNTIME140.dll
+0x00007ffa8c480000 - 0x00007ffa8c71b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.746_none_ca02b4b61b8320a4\COMCTL32.dll
+0x00007ffa993b0000 - 0x00007ffa9944e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffa98df0000 - 0x00007ffa98e20000 	C:\Windows\System32\IMM32.DLL
+0x00007ffa969d0000 - 0x00007ffa96a06000 	C:\Windows\system32\DriverStore\FileRepository\nvami.inf_amd64_1474122a0ce2f241\nvinitx.dll
+0x00007ffa991e0000 - 0x00007ffa9928c000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffa98e20000 - 0x00007ffa98ebc000 	C:\Windows\System32\sechost.dll
+0x00007ffa98770000 - 0x00007ffa9889b000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffa969c0000 - 0x00007ffa969ca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffa97960000 - 0x00007ffa980a2000 	C:\Windows\System32\Shell32.dll
+0x00007ffa94cd0000 - 0x00007ffa95460000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffa98410000 - 0x00007ffa98766000 	C:\Windows\System32\combase.dll
+0x00007ffa96510000 - 0x00007ffa9653c000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffa98ec0000 - 0x00007ffa98f6e000 	C:\Windows\System32\SHCORE.dll
+0x00007ffa98950000 - 0x00007ffa989a5000 	C:\Windows\System32\shlwapi.dll
+0x0000000052390000 - 0x0000000052396000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x00007ffa7d430000 - 0x00007ffa7d473000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x00007ffa974f0000 - 0x00007ffa97957000 	C:\Windows\System32\SETUPAPI.dll
+0x00007ffa97470000 - 0x00007ffa974be000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffa973a0000 - 0x00007ffa973c7000 	C:\Windows\System32\bcrypt.dll
+0x00007ffa7b700000 - 0x00007ffa7b72d000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x00007ffa82ab0000 - 0x00007ffa82b4b000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\msvcp140.dll
+0x00007ffa6e310000 - 0x00007ffa6ee93000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\server\jvm.dll
+0x00007ffa98380000 - 0x00007ffa98388000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffa80dd0000 - 0x00007ffa80dd9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffa983a0000 - 0x00007ffa9840b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffa943c0000 - 0x00007ffa943e7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffa94ad0000 - 0x00007ffa94ae2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffa90820000 - 0x00007ffa90830000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\verify.dll
+0x00007ffa81e40000 - 0x00007ffa82024000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffa7d3b0000 - 0x00007ffa7d3dc000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffa971c0000 - 0x00007ffa97240000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffa882e0000 - 0x00007ffa88308000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\java.dll
+0x00007ffa90750000 - 0x00007ffa9075a000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\jimage.dll
+0x00007ffa90730000 - 0x00007ffa9073e000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\instrument.dll
+0x00007ffa8ae30000 - 0x00007ffa8ae48000 	C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Dima\.jdks\corretto-11.0.14.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.746_none_ca02b4b61b8320a4;C:\Windows\system32\DriverStore\FileRepository\nvami.inf_amd64_1474122a0ce2f241;C:\Program Files\NVIDIA Corporation\CoProcManager;C:\Users\Dima\.jdks\corretto-11.0.14.1\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=59850:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin -Dfile.encoding=UTF-8 
+java_command: day12.Task1
+java_class_path (initial): C:\Users\Dima\Desktop\JavaMarathon2021\target\classes;C:\Users\Dima\.m2\repository\com\github\lkoskela\beaninject\0.9\beaninject-0.9.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar;C:\Users\Dima\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 83886080                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1312817152                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\Dima\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\GoLand 2021.2.4\bin;
+USERNAME=Dima
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+OS uptime: 2 days 22:56 hours
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 42 stepping 7 microcode 0x2f, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, clmul, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 5003M (348M free)
+TotalPageFile size 5003M (AvailPageFile size 60M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 48M, peak: 128M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.14.1+10-LTS) for windows-amd64 JRE (11.0.14.1+10-LTS), built on Feb  8 2022 00:13:20 by "Administrator" with unknown MS VC++:1916
+
+END.
